@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,9 +33,51 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
-      >
-        {children}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased flex flex-col h-screen justify-between`}
+      > 
+        <header className="p-1">
+          <h3 className="ms-2">📑 SISEPP</h3>
+        </header>
+        <main>
+          {children}
+        </main>
+        <footer className="p-2 grid grid-cols-2 gap-2 ">
+          <div>
+            <p>INBAL - SGEIA 2025 | Seguimiento de los programas y planes de estudio</p>
+          </div>
+          <div className="flex justify-around">
+            <a
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                aria-hidden
+                src="/file.svg"
+                alt="File icon"
+                width={16}
+                height={16}
+              />
+              Recursos de ayuda
+            </a>
+            <a
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                aria-hidden
+                src="/window.svg"
+                alt="Window icon"
+                width={16}
+                height={16}
+              />
+              Reportar incidente
+            </a>
+          </div>
+        </footer>
       </body>
     </html>
   );
