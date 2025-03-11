@@ -41,16 +41,14 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <footer className="p-2 grid grid-cols-2 gap-2 ">
-          <div>
-            <p>INBAL - SGEIA 2025 | Seguimiento de los programas y planes de estudio</p>
+        <footer className="p-2 grid grid-cols-2 gap-2 items-center h-10">
+          <div className="">
+            <span>INBAL - SGEIA 2025 | Seguimiento de los programas y planes de estudio</span>
           </div>
-          <div className="flex justify-around">
+          <div className="flex justify-around items-center">
             <a
               className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
             >
               <Image
                 aria-hidden
@@ -63,9 +61,7 @@ export default function RootLayout({
             </a>
             <a
               className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
             >
               <Image
                 aria-hidden
