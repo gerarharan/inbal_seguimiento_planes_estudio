@@ -39,7 +39,7 @@ export default function Statistics(){
   }]
 
   return <Card>
-    <h3 className="font-semibold">Estadísticas</h3>
+    <h3 className="font-semibold text-2xl">Estadísticas</h3>
     <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-4">
       <div className="flex flex-col justify-center ">
         <h4 className="text-blue-300 mt-2">Registros o actualizaciones</h4>
