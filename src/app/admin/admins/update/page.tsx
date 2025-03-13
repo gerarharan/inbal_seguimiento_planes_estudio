@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-export default function RegisterAdmin(){
+export default function UpdateAdmin(){
   return <>
     <form className="mt-3 mx-auto lg:max-w-6xl md:w-full transition duration-200">
-      <h1 className="font-semibold text-2xl">Registrar administrador</h1>
+      <h1 className="font-semibold text-2xl">Actualizar administrador</h1>
       <p className="mt-3 text-md text-gray-600 dark:text-white">
-        Ingresa los datos que se solicitan a continuación, al terminar da clic en <strong>Registrar</strong>.
+        Actualiza los datos que requieras, al terminar da clic en <strong>Actualizar</strong>.
       </p>
       <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-12">
         <div className="sm:col-span-4">
@@ -37,7 +37,7 @@ export default function RegisterAdmin(){
         </div>
 
         <div className="sm:col-span-6">
-          <label htmlFor="password" className="block text-sm/6 font-medium">Contraseña <sup className="text-red-400">*</sup></label>
+          <label htmlFor="password" className="block text-sm/6 font-medium">Contraseña </label>
           <div className="mt-2">
             <input id="password" name="password" type="password" className="block w-full rounded-md bg-white text-gray-800 px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
           </div>
@@ -165,7 +165,7 @@ export default function RegisterAdmin(){
             Regresar al listado
           </Link>
           <button className="rounded-md bg-cyan-500 flex items-center gap-2 px-2 py-2.5 text-sm font-semibold text-white focus:outline-none hover:bg-cyan-600 hover:transition duration-200 cursor-pointer" type="button">
-            Registrar
+            Actualizar
           </button>
         </div>
       </div>
