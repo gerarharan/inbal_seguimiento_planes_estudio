@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import { unstable_ViewTransition as ViewTransition} from "react";
-import Image from "next/image";
+
+import Header from "@/app/componentes/Header";
+import Footer from "@/app/componentes/Footer";
+import { CircleUserRound } from 'lucide-react';
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -36,47 +42,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased flex flex-col h-screen justify-between`}
       > 
-        <header className="p-1">
-          <h3 className="ms-2">📑 SISEPP</h3>
-        </header>
-        <ViewTransition>
-          <main>
+        <Header>
+          <Link href="/admin/profile" className="flex items-center gap-2 px-2 rounded-lg transition duration-300 hover:bg-gray-300 text-lg">
+            <CircleUserRound />
+            Mi perfil
+          </Link>
+        </Header>
+        <main>
+          <ViewTransition>
             {children}
-          </main>
-        </ViewTransition>
-        <footer className="p-2 grid grid-cols-2 gap-2 items-center h-10">
-          <div className="">
-            <span>INBAL - SGEIA 2025 | Seguimiento de los programas y planes de estudio</span>
-          </div>
-          <div className="flex justify-around items-center">
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="#"
-            >
-              <Image
-                aria-hidden
-                src="/file.svg"
-                alt="File icon"
-                width={16}
-                height={16}
-              />
-              Recursos de ayuda
-            </a>
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="#"
-            >
-              <Image
-                aria-hidden
-                src="/window.svg"
-                alt="Window icon"
-                width={16}
-                height={16}
-              />
-              Reportar incidente
-            </a>
-          </div>
-        </footer>
+          </ViewTransition>
+        </main>
+        <Footer />
       </body>
     </html>
   );

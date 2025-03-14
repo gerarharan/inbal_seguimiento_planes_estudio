@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export default function RegisterAdmin(){
@@ -158,15 +160,13 @@ export default function RegisterAdmin(){
         </div>
 
         <div className="sm:col-span-12 flex justify-between">
-          <Link href="../admins/" className="rounded-md bg-gray-500 flex items-center gap-2 px-2 py-2.5 text-sm font-medium text-white focus:outline-none hover:bg-gray-700 hover transition duration-300 cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-            </svg>
+          <Button asChild variant="outline" className="flex items-center hover:bg-gray-200 hover transition duration-300 cursor-pointer">
+            <Link href="/admin/admins/">
+            <ArrowLeft className="me-1"  size={18} />
             Regresar al listado
-          </Link>
-          <button className="rounded-md bg-cyan-500 flex items-center gap-2 px-2 py-2.5 text-sm font-semibold text-white focus:outline-none hover:bg-cyan-600 hover:transition duration-200 cursor-pointer" type="button">
-            Registrar
-          </button>
+            </Link>
+          </Button>
+          <Button variant="outline" className="bg-cyan-500 text-white font-semibold focus:outline-none hover:bg-cyan-700 hover:transition duration-200 cursor-pointer">Registrar</Button>
         </div>
       </div>
     </form>
