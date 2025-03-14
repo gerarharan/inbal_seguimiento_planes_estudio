@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased flex flex-col h-screen justify-between`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased flex flex-col justify-between`}
       > 
         <Header>
           <Link href="/admin/profile" className="flex items-center gap-2 px-2 rounded-lg transition duration-300 hover:bg-gray-300 text-lg">
@@ -48,7 +48,7 @@ export default function RootLayout({
             Mi perfil
           </Link>
         </Header>
-        <main>
+        <main className="">
           <ViewTransition>
             {children}
           </ViewTransition>

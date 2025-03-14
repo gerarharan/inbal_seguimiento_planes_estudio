@@ -12,12 +12,10 @@ export default function DashboardLayout({
   lastRegisters: React.ReactNode,
 }){
   return <>
-    <section>
-      <h3 className="mt-3 mb-4">Componente principal</h3>
-      <aside>{ analytics }</aside>
-      <aside>{ statistics }</aside>
-      <aside>{ lastRegisters }</aside>
-    </section>
+    <h3 className="font-semibold text-2xl mb-2">Dashboard</h3>
+    <aside>{ analytics }</aside>
+    <aside>{ statistics }</aside>
+    <aside>{ lastRegisters }</aside>
     <section>{children}</section>
   </>
 }

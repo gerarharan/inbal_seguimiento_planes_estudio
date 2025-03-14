@@ -17,7 +17,7 @@ export default function AdminLayout(
 
   return (
     <>
-      <main className="relative h-[calc(100vh-100px)] md:flex">
+      <main className="relative h-[calc(100vh-100px)] md:flex overflow-y-auto">
         {/* Mobile menu bar */}
         <div className="mobile-menu-button bg-gray-800 text-gray-100 flex justify-between md:hidden">
           <Link href="/admin/dashboard" className="my-3 space-x-2 flex items-center text-white hover:text-fuchsia-300">
@@ -30,10 +30,8 @@ export default function AdminLayout(
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
-
           </button>
         </div>
-        
         {/* Sidebar */}
         <aside className={`sidebar p-2 bg-blue-800 text-blue-100 w-64 absolute inset-y-0 left-0 transform ${isActive ? '-translate-x-full' : ''} md:relative md:translate-x-0 transition duration-200 ease-in-out`}>
           <Link href="/admin/dashboard" className="my-3 space-x-2 flex items-center text-white hover:text-fuchsia-300">
@@ -113,7 +111,7 @@ export default function AdminLayout(
             </Link>
           </nav>
         </aside>
-        <section className="flex-1 h-[calc(100vh-180px)] p-5">
+        <section className="flex-1 p-5">
           {children}
         </section>
       </main>
