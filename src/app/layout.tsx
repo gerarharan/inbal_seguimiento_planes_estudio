@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { unstable_ViewTransition as ViewTransition} from "react";
 import Image from "next/image";
 import "./globals.css";
 
@@ -38,9 +39,11 @@ export default function RootLayout({
         <header className="p-1">
           <h3 className="ms-2">📑 SISEPP</h3>
         </header>
-        <main>
-          {children}
-        </main>
+        <ViewTransition>
+          <main>
+            {children}
+          </main>
+        </ViewTransition>
         <footer className="p-2 grid grid-cols-2 gap-2 items-center h-10">
           <div className="">
             <span>INBAL - SGEIA 2025 | Seguimiento de los programas y planes de estudio</span>

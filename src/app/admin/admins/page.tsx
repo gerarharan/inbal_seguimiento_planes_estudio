@@ -23,15 +23,15 @@ export default function Admins(){
       </div>
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-3">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th className="w-11 text-center px-6 py-3">#</th>
-              <th scope="col" className="px-6 py-3">Nombre</th>
-              <th scope="col" className="px-6 py-3">Email</th>
-              <th scope="col" className="px-6 py-3">Teléfono</th>
-              <th scope="col" className="px-6 py-3">Escuela</th>
-              <th scope="col" className="px-6 py-3 text-center">Estatus</th>
-              <th scope="col" className="px-6 py-3 text-center">Acciones</th>
-            </tr>
+          <tr>
+            <th className="w-11 text-center px-6 py-3">#</th>
+            <th scope="col" className="px-6 py-3">Nombre</th>
+            <th scope="col" className="px-6 py-3">Email</th>
+            <th scope="col" className="px-6 py-3">Teléfono</th>
+            <th scope="col" className="px-6 py-3">Escuela</th>
+            <th scope="col" className="px-6 py-3 text-center">Estatus</th>
+            <th scope="col" className="px-6 py-3 text-center">Acciones</th>
+          </tr>
         </thead>
         <tbody>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
@@ -57,11 +57,11 @@ export default function Admins(){
             </td>
             <td className="px-6 py-4 text-center">
               <div className="w-full flex justify-around ">
-                <button type="button" className="text-slate-400 hover:text-slate-600 me-2 cursor-pointer">
+                <Link href="./admins/history" className="text-slate-400 hover:text-slate-600 me-2 cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
                   </svg>
-                </button>
+                </Link>
                 <Link href="./admins/update" className="text-blue-400 hover:text-blue-600 me-2 cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
@@ -103,11 +103,11 @@ export default function Admins(){
             </td>
             <td className="px-6 py-4 text-center">
               <div className="w-full flex justify-around ">
-                <button type="button" className="text-slate-400 hover:text-slate-600 me-2 cursor-pointer">
+                <Link href="./admins/history" className="text-slate-400 hover:text-slate-600 me-2 cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
                   </svg>
-                </button>
+                </Link>
                 <Link href="./admins/update" className="text-blue-400 hover:text-blue-600 me-2 cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
